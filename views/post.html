@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,input,legend,li,ol,p,ul {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif,"黑体";
+    }
+    li,ol,ul {
+        list-style: none
+    }
+    body{
+        padding:100px 0 0 200px;
+    }
+    .title{
+        font-size: 30px;
+        color: skyblue;
+        font-family: '黑体';
+    }
+    .title>i{font-size: 16px;color: #666;margin-left: 10px;font-family: 'Bradley Hand ITC';}
+    .name{
+        width: 510px;
+        height: 40px;
+        border: 1px solid skyblue;
+        margin-top: 10px;
+        display: block;
+        padding-left: 10px;
+    }
+    .value{
+        width: 500px;
+        height: 300px;
+        border: 1px solid skyblue;
+        margin-top: 10px;
+        display: block;
+        padding:10px;
+    }
+    .btn{
+        width: 90px;
+        height: 28px;
+        text-align: center;
+        line-height: 28px;
+        background-color: slateblue;
+        color: #fff;
+        font-size: 14px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h1 class="title">留言<i>message</i></h1>
+    <form action="/postValue" method="get">
+        <input type="text" class="name" name="name" placeholder="你的大名">
+
+        <textarea name="value" class="value" placeholder="留言"></textarea>
+        <input type="submit" value="提交" class="btn">
+    </form>
+</body>
+</html>

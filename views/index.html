@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,html,img,input,legend,li,ol,p,ul {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif,"微软雅黑";
+        }
+        li,ol,ul {
+            list-style: none
+        }
+        body{
+            padding:100px 0 0 200px;
+        }
+        .title{
+            font-size: 30px;
+            color: skyblue;
+            font-family: '黑体';
+        }
+        .title>i{font-size: 16px;color: #666;margin-left: 10px;font-family: 'Bradley Hand ITC';}
+        .content{
+            width: 500px;
+            height: 600px;
+            border: 1px solid skyblue;
+            border-radius: 4px;
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+        .content li{
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            position: relative;
+        }
+        .content li .dateTime{
+            position: absolute;
+            top: 50%;margin-top:-15px;
+            right: 0;
+        }
+        .btn{
+            width: 90px;
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            background-color: slateblue;
+            color: #fff;
+            font-size: 14px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">留言板<i>message board</i></h1>
+    <ul class="content">
+        {{each contents}}
+            <li>{{$value.name}}：{{$value.value}}<div class="dateTime">{{$value.dateTime}}</div></li>
+        {{/each}}
+    </ul>
+    <div class="btn">留言</div>
+    <script>
+        document.querySelector('.btn').onclick = function(){
+            window.location.href = '/post';
+        }
+    </script>
+</body>
+</html>
